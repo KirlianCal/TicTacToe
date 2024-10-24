@@ -5,10 +5,47 @@
 }
 button {
   background: rgb(160, 160, 160);
-  width: 200px;
-  height: 200px;
+  height: 175px;
+  width: 175px;
+  font-size: 175px;
 }
 h1 {
   width: fit-content;
   margin: auto;
+}
+img {
+  height: 175px;
+  width: 175px;
+}
+
+button:disabled {
+  color: black;
+  height: 175px;
+  width: 175px;
+  font-size: 175px;
+}
+.container {
+  width: auto;
+}
+.row {
+  display: block;
+  width: fit-content;
+  margin: auto;
+}
+.reset {
+  margin-top: 15px;
+  font-size: 25px;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+#player1 {
+  float: left;
+  font-size: 50px;
+  text-align: center;
+}
+#player2 {
+  float: right;
+  font-size: 50px;
+  text-align: center;
 }

@@ -1,150 +1,135 @@
-function startGame() {
-  var sq1C = document.getElementById("1").clicked;
-  var sq2C = document.getElementById("2").clicked;
-  var sq3C = document.getElementById("3").clicked;
-  var sq4C = document.getElementById("4").clicked;
-  var sq5C = document.getElementById("5").clicked;
-  var sq6C = document.getElementById("6").clicked;
-  var sq7C = document.getElementById("7").clicked;
-  var sq8C = document.getElementById("8").clicked;
-  var sq9C = document.getElementById("9").clicked;
+let turn=0;
+var player1=0;
+var player2=0;
+let board=["a","b","c","d","f","g","h","i","j"]
+function run(id){
+    if(turn%2==0){
+        x=document.getElementById(id);
+        x.innerText="X";
+        x.disabled=true;
+        turn++;
+        board[id]="1"
+    }else{
+        x=document.getElementById(id);
+        x.innerText="O";
+        x.disabled=true;
+        turn++;
+        board[id]="0"
+    }
+    if(turn>=3){
+        check();
+    }
 }
-
-var sq1 = document.getElementById("1");
-var sq2 = document.getElementById("2");
-var sq3 = document.getElementById("3");
-var sq4 = document.getElementById("4");
-var sq5 = document.getElementById("5");
-var sq6 = document.getElementById("6");
-var sq7 = document.getElementById("7");
-var sq8 = document.getElementById("8");
-var sq9 = document.getElementById("9");
-
-let buttons = document.getElementsByClassName("btn");
-
-marker = 1;
-function b1() {
-  if (marker == 1) {
-    document.getElementById(1).innerHTML = "X";
-    document.getElementById(1).disabled = true;
-
-    marker = 0;
-  } else {
-    document.getElementById(1).innerHTML = "O";
-    document.getElementById(1).disabled = true;
-
-    marker = 1;
-  }
+function check(){
+    for(let i=0;i<board.length;i++){
+        if(board[0]==board[1]&&board[0]==board[2]){
+            if(board[0]=="1"){
+                player1Win();
+                break; 
+            }
+            if(board[0]=="0"){
+                player2Win();
+                break; 
+            }
+        }
+        if(board[3]==board[4]&&board[3]==board[5]){
+            if(board[3]=="1"){
+                player1Win();
+                break; 
+            }
+            if(board[3]=="0"){
+                player2Win();
+                break; 
+            }
+        }
+        if(board[6]==board[7]&&board[6]==board[8]){
+            if(board[6]=="1"){
+                player1Win();
+                break; 
+            }
+            if(board[6]=="0"){
+                player2Win();
+                break; 
+            }
+        }
+        if(board[0]==board[3]&&board[0]==board[6]){
+            if(board[0]=="1"){
+                player1Win();
+                break; 
+            }
+            if(board[0]=="0"){
+                player2Win();
+                break; 
+            }
+        }
+        if(board[1]==board[4]&&board[1]==board[7]){
+            if(board[1]=="1"){
+                player1Win();
+                break; 
+            }
+            if(board[1]=="0"){
+                player2Win();
+                break; 
+            }
+        }
+        if(board[2]==board[5]&&board[2]==board[8]){
+            if(board[2]=="1"){
+                player1Win();
+                break; 
+            }
+            if(board[2]=="0"){
+                player2Win();
+                break; 
+            }
+        }
+        if(board[0]==board[4]&&board[0]==board[8]){
+            if(board[0]=="1"){
+                player1Win();
+                break; 
+            }
+            if(board[0]=="0"){
+                player2Win();
+                break; 
+            }
+        }
+        if(board[2]==board[4]&&board[2]==board[6]){
+            if(board[2]=="1"){
+                player1Win();
+                break; 
+            }
+            if(board[2]=="0"){
+                player2Win();
+                break; 
+            }
+        }
+        for()
+   }
 }
-
-function b2() {
-  if (marker == 1) {
-    document.getElementById(2).innerHTML = "X";
-    document.getElementById(2).disabled = true;
-
-    marker = 0;
-  } else {
-    document.getElementById(2).innerHTML = "O";
-    document.getElementById(2).disabled = true;
-
-    marker = 1;
-  }
+function reset(){
+    board=["a","b","c","d","f","g","h","i","j"]
+    x=document.getElementsByClassName("button");
+    for(let i=0;i<x.length;i++){
+        x[i].innerText="";
+        x[i].disabled=false
+    }
 }
-
-function b3() {
-  if (marker == 1) {
-    document.getElementById(3).innerHTML = "X";
-    document.getElementById(3).disabled = true;
-
-    marker = 0;
-  } else {
-    document.getElementById(3).innerHTML = "O";
-    document.getElementById(3).disabled = true;
-
-    marker = 1;
-  }
+document.getElementById("player1").innerHTML=`Player X's Score:<br>${player1}`
+document.getElementById("player2").innerHTML=`Player O's Score:<br> ${player2}`
+function player1Win(){
+    player1++;
+    x=document.getElementsByClassName("button");
+    turn=0;
+    for(let i=0;i<x.length;i++){
+        x[i].disabled=true
+    }
+    document.getElementById("player1").innerHTML=`Player X's Score:<br>${player1}`
 }
-
-function b4() {
-  if (marker == 1) {
-    document.getElementById(4).innerHTML = "X";
-    document.getElementById(4).disabled = true;
-
-    marker = 0;
-  } else {
-    document.getElementById(4).innerHTML = "O";
-    document.getElementById(4).disabled = true;
-
-    marker = 1;
-  }
-}
-
-function b5() {
-  if (marker == 1) {
-    document.getElementById(5).innerHTML = "X";
-    document.getElementById(5).disabled = true;
-
-    marker = 0;
-  } else {
-    document.getElementById(5).innerHTML = "O";
-    document.getElementById(5).disabled = true;
-
-    marker = 1;
-  }
-}
-
-function b6() {
-  if (marker == 1) {
-    document.getElementById(6).innerHTML = "X";
-    document.getElementById(6).disabled = true;
-
-    marker = 0;
-  } else {
-    document.getElementById(6).innerHTML = "O";
-    document.getElementById(6).disabled = true;
-
-    marker = 1;
-  }
-}
-
-function b7() {
-  if (marker == 1) {
-    document.getElementById(7).innerHTML = "X";
-    document.getElementById(7).disabled = true;
-
-    marker = 0;
-  } else {
-    document.getElementById(7).innerHTML = "O";
-    document.getElementById(7).disabled = true;
-
-    flag = 1;
-  }
-}
-
-function b8() {
-  if (marker == 1) {
-    document.getElementById(8).innerHTML = "X";
-    document.getElementById(8).disabled = true;
-
-    marker = 0;
-  } else {
-    document.getElementById(8).innerHTML = "O";
-    document.getElementById(8).disabled = true;
-
-    marker = 1;
-  }
-}
-
-function b9() {
-  if (marker == 1) {
-    document.getElementById(9).innerHTML = "X";
-    document.getElementById(9).disabled = true;
-
-    marker = 0;
-  } else {
-    document.getElementById(9).innerHTML = "O";
-    document.getElementById(9).disabled = true;
-
-    marker = 1;
-  }
+function player2Win(){
+    player2++;
+    x=document.getElementsByClassName("button");
+    turn=0;
+    for(let i=0;i<x.length;i++){
+        x[i].disabled=true
+    }
+    document.getElementById("player2").innerHTML=`Player O's Score:<br>${player2}`
 }
