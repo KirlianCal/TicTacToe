@@ -1,7 +1,8 @@
-let turn=0;
+var turn=0;
+var ties=0;
 var player1=0;
 var player2=0;
-let board=["a","b","c","d","f","g","h","i","j"]
+var board=["a","b","c","d","f","g","h","i","j"]
 function run(id){
     if(turn%2==0){
         x=document.getElementById(id);
@@ -102,8 +103,12 @@ function check(){
                 break; 
             }
         }
-        for()
-   }
+        if(board.every(element => !isNaN(element))){
+            ties++;
+            document.getElementById("ties").innerHTML=`Ties: ${ties}`
+            break;
+        }
+    }
 }
 function reset(){
     board=["a","b","c","d","f","g","h","i","j"]
@@ -111,11 +116,14 @@ function reset(){
     for(let i=0;i<x.length;i++){
         x[i].innerText="";
         x[i].disabled=false
+        turn=0;
     }
 }
 document.getElementById("player1").innerHTML=`Player X's Score:<br>${player1}`
 document.getElementById("player2").innerHTML=`Player O's Score:<br> ${player2}`
+document.getElementById("ties").innerHTML=`Ties: ${ties}`
 function player1Win(){
+    board=["a","b","c","d","f","g","h","i","j"]
     player1++;
     x=document.getElementsByClassName("button");
     turn=0;
@@ -125,6 +133,7 @@ function player1Win(){
     document.getElementById("player1").innerHTML=`Player X's Score:<br>${player1}`
 }
 function player2Win(){
+    board=["a","b","c","d","f","g","h","i","j"]
     player2++;
     x=document.getElementsByClassName("button");
     turn=0;
