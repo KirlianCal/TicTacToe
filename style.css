@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+button {
+  background: rgb(160, 160, 160);
+  width: 200px;
+  height: 200px;
+}
+h1 {
+  width: fit-content;
+  margin: auto;
+}
