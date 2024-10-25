@@ -8,21 +8,25 @@
 </head>
 <body>
     <h1>Tic-Tac-Toe</h1>
+    <div id="playerTurn"></div>
     <div id="player1"></div>
     <div id="player2"></div>
     <div class="container">
-            <button onclick="run(this.id)" id="0" class="button"></button>
-            <button onclick="run(this.id)" id="1" class="button"></button>
-            <button onclick="run(this.id)" id="2" class="button"></button>
-            <button onclick="run(this.id)" id="3" class="button"></button>
-            <button onclick="run(this.id)" id="4" class="button"></button>
-            <button onclick="run(this.id)" id="5" class="button"></button>
-            <button onclick="run(this.id)" id="6" class="button"></button>
-            <button onclick="run(this.id)" id="7" class="button"></button>
-            <button onclick="run(this.id)" id="8" class="button"></button>
+        <button onclick="run(this.id)" id="0" class="button"></button>
+        <button onclick="run(this.id)" id="1" class="button"></button>
+        <button onclick="run(this.id)" id="2" class="button"></button>
+        <button onclick="run(this.id)" id="3" class="button"></button>
+        <button onclick="run(this.id)" id="4" class="button"></button>
+        <button onclick="run(this.id)" id="5" class="button"></button>
+        <button onclick="run(this.id)" id="6" class="button"></button>
+        <button onclick="run(this.id)" id="7" class="button"></button>
+        <button onclick="run(this.id)" id="8" class="button"></button>
     </div>
     <div id="ties"></div>
-        <button onclick="reset()" class="reset">RESET GAME</button>
+    <div class="bottom">
+        <button onclick="resetBoard()" class="reset">RESET BOARD</button>
+        <button onclick="resetGame()" class="reset">RESET GAME</button>
+    </div>
     <script src="style.js"></script>
 </body>
 </html>

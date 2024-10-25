@@ -3,27 +3,24 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background-color: rgb(240, 240, 240);
+}
 .button{
-    background: rgb(160, 160, 160);
+    background: rgb(0, 0, 0);
     height: 175px;
     width: 175px;
-    font-size: 175px;
+    font-size: 150px;
     margin: auto;
+    border: 1px solid rgb(255, 255, 255);
 }
 h1{
     width: fit-content;
     margin: auto;
+    margin-bottom: 15px;
 }
-img{
-    height: 175px;
-    width: 175px;
-}
-
 .button:disabled{
-    color: black;
-    height: 175px;
-    width: 175px;
-    font-size: 175px;
+    color: rgb(255, 255, 255);
 }
 .container{
     width: 525px;
@@ -37,25 +34,40 @@ img{
     width: fit-content;
     margin: auto;
 }
-.reset{
-    margin-top: 15px;
-    font-size: 25px;
-    margin: auto;
-    display: flex;
-    padding: 15px;
-}
 #player1{
     float: left;
     font-size: 50px;
     text-align: center;
+    margin-left: 75px;
 }
 #player2{
     float: right;
     font-size: 50px;
     text-align: center;
+    margin-right: 75px;
 }
 #ties{
     font-size: 50px;
     margin: auto;
     width: fit-content;
+}
+.button:hover{
+    border: black;
+    filter: invert(1);
+}
+#playerTurn{
+    width: fit-content;
+    margin: auto;
+    font-size: 25px;
+}
+.reset{
+    font-size: 25px;
+    padding: 15px;
+    width: fit-content;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.bottom{
+    width: fit-content;
+    margin: auto;
 }
