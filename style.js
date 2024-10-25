@@ -6,12 +6,16 @@ function run(id) {
   if (turn % 2 == 0) {
     x = document.getElementById(id);
     x.innerText = "X";
+    x.classList.add("glow-x");
+
     x.disabled = true;
+
     turn++;
     board[id] = "1";
   } else {
     x = document.getElementById(id);
     x.innerText = "O";
+    x.classList.add("glow-o");
     x.disabled = true;
     turn++;
     board[id] = "0";
