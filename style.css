@@ -23,17 +23,13 @@ body {
 }
 
 h1 {
-  transform: translateY(55%);
+  transform: translateY(25%);
   width: fit-content;
   margin: auto;
   font-family: Comfortaa, sans-serif;
-  font-size: 60px;
+  font-size: 30px;
   color: #5ff0d0;
   text-shadow: #5ff0d0 0 0 10px;
-}
-img {
-  height: 175px;
-  width: 175px;
 }
 
 button:disabled {
@@ -46,7 +42,7 @@ button:disabled {
 }
 
 .container {
-  transform: translateY(15%);
+  transform: translateY(10%);
   width: auto;
   display: flex;
   flex-direction: column;
@@ -57,11 +53,10 @@ button:disabled {
 }
 
 .reset {
-  transform: translateY(60%);
-  margin-top: 15px;
+  transform: translateY(10%);
   font-size: 25px;
-  width: 300px;
-  height: 100px;
+  width: 250px;
+  height: 75px;
   margin: auto;
   font-family: Comfortaa, sans-serif;
   text-transform: lowercase;
@@ -71,6 +66,8 @@ button:disabled {
   text-shadow: #5ff0d0 0px 0px 20px;
   color: #5ff0d0;
   box-shadow: rgb(95, 240, 200 15%) 0px 0px 50px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .reset:hover {
@@ -81,6 +78,18 @@ button:disabled {
   transition: 1ms;
 }
 
+#ties{
+  width: fit-content;
+  margin: auto;
+  font-family: Comfortaa, sans-serif;
+  font-size: 30px;
+  color: #5ff0d0;
+  text-shadow: #5ff0d0 0 0 10px;
+}
+
+.bottom{
+  display: flex;
+}
 #player1 {
   float: left;
   font-size: 40px;
@@ -94,6 +103,15 @@ button:disabled {
   font-size: 40px;
   text-align: center;
   font-family: Comfortaa, sans-serif;
+  color: #5ff0d0;
+  text-shadow: #5ff0d0 0 0 10px;
+}
+#playerTurn {
+  transform: translateY(150%);
+  width: fit-content;
+  margin: auto;
+  font-family: Comfortaa, sans-serif;
+  font-size: 30px;
   color: #5ff0d0;
   text-shadow: #5ff0d0 0 0 10px;
 }

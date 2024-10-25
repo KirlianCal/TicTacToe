@@ -130,7 +130,6 @@ function resetBoard(){
 function resetGame(){
     location.reload();
 }
-
 function player1Win(){
     board=["a","b","c","d","f","g","h","i","j"]
     player1++;

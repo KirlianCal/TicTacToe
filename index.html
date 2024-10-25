@@ -14,9 +14,9 @@
   </head>
   <body>
     <h1>Tic-Tac-Toe</h1>
-    <div id="playerTurn"></div>
     <div id="player1"></div>
     <div id="player2"></div>
+    <div id="playerTurn">Player X's Turn</div>
     <div class="container">
       <div class="row">
         <button onclick="run(this.id)" id="0" class="btn-0 button"></button>
@@ -33,8 +33,11 @@
         <button onclick="run(this.id)" id="7" class="btn-7 button"></button>
         <button onclick="run(this.id)" id="8" class="btn-8 button"></button>
       </div>
-      <button onclick="reset()" class="reset">RESET GAME</button>
-
+      <div class="bottom">
+        <button onclick="resetBoard()" class="reset">RESET BOARD</button>
+        <button onclick="resetGame()" class="reset">RESET GAME</button>
+        <h1 id="ties"></h1>
+      </div>
     </div>
     <script src="style.js"></script>
   </body>
