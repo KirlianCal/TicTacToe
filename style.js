@@ -117,10 +117,14 @@ function check() {
   }
   document.getElementById(
     "player1"
-  ).innerHTML = `Player X's Score:<br>${player1}`;
+  ).innerHTML = `player X's Score:<br>${player1}`;
+  document.getElementById(
+    "player1"
+  ).innerHTML = `player X's Score:<br>${player1}`;
+
   document.getElementById(
     "player2"
-  ).innerHTML = `Player O's Score:<br> ${player2}`;
+  ).innerHTML = `player O's Score:<br> ${player2}`;
   function player1Win() {
     player1++;
     x = document.getElementsByClassName("button");
